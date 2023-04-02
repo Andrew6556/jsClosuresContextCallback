@@ -8,9 +8,7 @@
     <title>Замыкания, контекст, callback</title>
 </head>
 <body>
-    <div class="modal">
-        <div class="modal__title">modal__title</div>
-    </div>
+    
     <div class="wrapper">
         <div class="container">
             <div class="films">
@@ -19,27 +17,40 @@
                         <div class="card__img">
                             <img class="card__image-item" src="./img/1.jpg" alt="#" >
                         </div>
-                        <div class="card__title">Хатико</div>
+                        <div class="card__title title">Хатико</div>
                         <button class="card__btn btn">Открыть</button>
                     </div>
                     <div class="card card_bg-brown">
                         <div class="card__img">
                             <img class="card__image-item" src="./img/2.webp" alt="#" >
                         </div>
-                        <div class="card__title">Джентльмены</div>
+                        <div class="card__title title">Джентльмены</div>
                         <button class="card__btn btn">Открыть</button>
                     </div>
                     <div class="card card_bg-yellow">
                         <div class="card__img">
                             <img class="card__image-item" src="./img/3.webp" alt="#" >
                         </div>
-                        <div class="card__title">Волк с Уолл-стрит</div>
+                        <div class="card__title title">Волк с Уолл-стрит</div>
                         <button class="card__btn btn">Открыть</button>
                     </div>
                 </div>
                 <!-- cards__wrapper -->
             </div>
             <!-- cards -->
+        </div>
+        <div class="modal">
+            <div class="modal__body">
+                <div class="modal__content">
+                    <span class="modal__close">X</span>
+                    <div class="modal__img">
+                        <img class="modal__img-item" src="./img/2.webp" alt="img">
+
+                    </div>
+                    <div class="modal__title title">modal__title</div>
+
+                </div>
+            </div>
         </div>
     </div>
     <script src="./js/index.js"></script>
