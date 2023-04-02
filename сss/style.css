@@ -156,7 +156,7 @@ button{
     height: 300px;
 }
 /* modal */
-.modal{
+.modalInfo{
     position: fixed;
     z-index: 2;
     top:0;
@@ -166,17 +166,17 @@ button{
     background: rgba(0, 0, 0, 0.801);
     transition: all 2s ease;
 }
-.modal__body{
+.modalInfo__body{
     padding: 10px;
 }
-.modal__content{
+.modalInfo__content{
     width: 350px;
     box-shadow: -2px 43px 122px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background: #f2bb15b4;
     position: relative;
 }
-.modal__close{
+.modalInfo__close{
     position: absolute;
     top: 15px;
     right: 15px;
@@ -184,4 +184,67 @@ button{
     font-weight: 500;
     color: #f2bb15cb;
     cursor: pointer;
+}
+/* modalForm */
+.modalForm{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    top:0;
+    left: 0;
+    transition: all 2s ease;
+}
+.modalForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    min-height: 100%;
+}
+.modalForm__content{
+    background: white;
+    width: 400px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+    box-shadow: -2px 43px 122px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+}
+.modalForm__close{
+    cursor: pointer;
+    font-size: 25px;
+    display: block;
+    position: absolute; 
+    top: 18px;
+    right: 30px;
+}
+/* form */
+.form__inner{
+    margin-bottom: 30px;
+}
+.form__title{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.form__sabtitle{
+    font-size: 20px;
+    line-height: 31px;
+}
+.form__input{
+    font-size: 18px;
+    color:black;
+    padding: 22px 30px;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px solid #DDDDDD;
+}
+.form__input:not(:last-child){
+    margin-bottom: 14px;
+}
+.form__btn{
+    padding: 15px 0;
+    margin: 0 auto;
 }
