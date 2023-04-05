@@ -220,6 +220,7 @@ button{
     padding: 0 40px;
 }
 .form__title{
+    margin-bottom: 30px;
     font-size: 28px;
 }
 .form__input{

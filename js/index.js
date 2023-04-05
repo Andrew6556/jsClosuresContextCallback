@@ -9,7 +9,7 @@ modal_close.forEach(item_close=>{
     item_close.addEventListener("click", link =>{
         // Удаление класса внезависмости от формы
         link.target.parentElement.parentElement.parentElement.classList.toggle("active")
-        // Мне вот это самому не нравится но лучше способа не нашел:(
+        // Мне вот это самому не нравится ,но лучше способа не нашел:(
     })
 })
 
