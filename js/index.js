@@ -34,21 +34,20 @@ btn_del_card.forEach(item => {
     })
 })
 document.querySelector(".form").addEventListener("submit", function(link){
-    // console.log(link)
-    link.preventDefault()
+    link.preventDefault();
     validation(this)
 })
 
 function validation(form){
     const all_inputs = form.querySelectorAll(".form__input");
-    
+
     function error_input(input){
         let parent_div = input.parentElement
         parent_div.classList.add("form__item_error")
 
         let message_error = document.createElement("span")
         message_error.classList.add("form__error-text")
-        message_error.innerText = "*Не заполненно данное поле";
+        message_error.innerText = "*Не заполнено данное поле";
 
         parent_div.appendChild(message_error)
     }
@@ -65,4 +64,10 @@ function validation(form){
             error_input(item)
         }
     })
+    const data_form = Array.from(all_inputs).map(item => item.value);
+    return (data_form.includes("")) ? false : data_form;
+}
+
+function create_card(data_form){
+    
 }

@@ -82,7 +82,6 @@ input::placeholder{
     flex-direction: column;
 }
 /* block */
-
 .title {
     font-size: 25px;
     font-weight: 500;
@@ -128,9 +127,12 @@ input::placeholder{
     display: flex;
     justify-content: center;
 }
+.card__password{
+    text-align: center;
+}
 .card {
-    max-width: 400px;
-    box-shadow: 3px 3px 0px #1a1a1a2a;
+    width: 400px;
+    box-shadow: 3px 3px 0px #1a1a1a67;
     border-radius: 20px;
     background: #ffff;
     transition: all 1s ease-out 0s;
@@ -138,6 +140,7 @@ input::placeholder{
 }
 .card__buttons{
     padding: 20px 0;
+    display: flex;
     justify-content: space-between;
 }
 /* модификаторы */
@@ -163,7 +166,15 @@ input::placeholder{
     padding: 8px 0;
     margin: 0 30px;
 }
-
+/* users-info */
+.users-info__wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.users-info__wrapper .title{
+    padding: 15px 0;
+}
 /* modal */
 .modal{
     position: fixed;
