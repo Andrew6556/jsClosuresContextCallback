@@ -20,19 +20,32 @@ document.querySelector(".header__form").addEventListener("click", ()=>{
 btn_open_card.forEach(item => {
     item.addEventListener("click",function(link){
         modal[0].classList.toggle("active")
-        console.log(modal)
-        get_card_details(link)
+        // console.log(modal)
+        return function(){
+            modal[0].querySelector(".modal__img-item").src    = link.target.parentElement.parentElement.querySelector(".card__image-item").src;
+            modal[0].querySelector(".modal__title").innerText = link.target.parentElement.parentElement.querySelector(".card__title").innerText;
+        }()
     })
 })
-
 btn_del_card.forEach(item => {
     item.addEventListener("click",function(link){
         link.target.parentElement.parentElement.classList.add('animate');
         setTimeout(() => link.target.parentElement.parentElement.remove(), 1000);
     })
 })
+document.querySelector(".form").addEventListener("submit", function(link){
+    // console.log(link)
+    link.preventDefault()
+    validation(this)
+})
 
-function get_card_details(link){
-    modal[0].querySelector(".modal__img-item").src    = link.target.parentElement.parentElement.querySelector(".card__image-item").src;
-    modal[0].querySelector(".modal__title").innerText = link.target.parentElement.parentElement.querySelector(".card__title").innerText;
+function validation(form){
+    const value_inputs = Array.from(form.querySelectorAll(".form__input")).map(elem => elem.value)
+    console.log(value_inputs)
+    
+    // all_inputs.forEach(input =>{
+    //     console.log(input.value)
+    //     if ()
+    // })
+
 }

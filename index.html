@@ -65,15 +65,19 @@
             </div>
         </div>
     </div>
-    <div class="modalForm modal active">
+    <div class="modalForm modal">
         <div class="modalForm__body modal__body">
             <div class="modalForm__content modal__content">
                 <span class="modalForm__close modal__close">X</span>
                 <form class="form" action="#">
                     <h3 class="form__title title">Заполните ваши данные</h3>
                     <div class="form__inner">
-                        <input class="form__input" id="form__forName" type="text" placeholder="Ваше имя">
-                        <input class="form__input" id="form__forPassword" type="text" placeholder="Ваш пароль">
+                        <div class="form__item">
+                            <input class="form__input" id="form__forName" type="text" name="UserName" placeholder="Ваше имя">
+                        </div>
+                        <div class="form__item">
+                            <input class="form__input" id="form__forPassword" type="text" name="Password" placeholder="Ваш пароль">
+                        </div>
                         <button class="form__btn btn" type="submit">Отправить</button>
                     </div>
                 </form>

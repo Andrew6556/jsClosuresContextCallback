@@ -207,7 +207,7 @@ button{
 /* modalForm */
 
 .modalForm__content{
-    width: 500px;
+    width: 400px;
     box-shadow: -2px 43px 122px rgba(0, 0, 0, 0.1);
     background: white;
     border-radius: 20px;
@@ -217,7 +217,7 @@ button{
     color: #000;
 }
 .form__inner{
-    padding: 0 40px;
+    padding: 0 15px;
 }
 .form__title{
     margin-bottom: 30px;
