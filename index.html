@@ -73,10 +73,13 @@
                     <h3 class="form__title title">Заполните ваши данные</h3>
                     <div class="form__inner">
                         <div class="form__item">
-                            <input class="form__input" id="form__forName" type="text" name="UserName" placeholder="Ваше имя">
+                            <label class="form__label" for="form__forName">Ваше имя</label>
+                            <span class="form__error-text">*Забыли заполнить данное поле</span>
+                            <input class="form__input" id="form__forName" type="text" name="UserName" placeholder="Введите имя">
                         </div>
                         <div class="form__item">
-                            <input class="form__input" id="form__forPassword" type="text" name="Password" placeholder="Ваш пароль">
+                            <label class="form__label" for="form__forPassword">Ваш пароль</label>
+                            <input class="form__input" id="form__forPassword" type="text" name="Password" placeholder="Введите пароль">
                         </div>
                         <button class="form__btn btn" type="submit">Отправить</button>
                     </div>

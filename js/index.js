@@ -40,12 +40,21 @@ document.querySelector(".form").addEventListener("submit", function(link){
 })
 
 function validation(form){
-    const value_inputs = Array.from(form.querySelectorAll(".form__input")).map(elem => elem.value)
-    console.log(value_inputs)
+    const all_inputs = form.querySelectorAll(".form__input");
     
-    // all_inputs.forEach(input =>{
-    //     console.log(input.value)
-    //     if ()
-    // })
+    let error_input = function(input){
+        let parent_div = input.parentElement
+        parent_div.classList.add("form__item_error")
+        console.log(input.parentElement)
+    }
 
+    all_inputs.forEach(item =>{
+        if (item.value == ""){
+            console.log(1)
+            error_input(item)
+        }
+    })
+    
+    
+    
 }
