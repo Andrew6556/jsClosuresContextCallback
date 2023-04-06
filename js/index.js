@@ -42,19 +42,27 @@ document.querySelector(".form").addEventListener("submit", function(link){
 function validation(form){
     const all_inputs = form.querySelectorAll(".form__input");
     
-    let error_input = function(input){
+    function error_input(input){
         let parent_div = input.parentElement
         parent_div.classList.add("form__item_error")
-        console.log(input.parentElement)
-    }
 
+        let message_error = document.createElement("span")
+        message_error.classList.add("form__error-text")
+        message_error.innerText = "*Не заполненно данное поле";
+
+        parent_div.appendChild(message_error)
+    }
+    function del_error(input){
+        let parent_div = input.parentElement;
+        if (parent_div.classList.contains("form__item_error")){
+            parent_div.querySelector(".form__error-text").remove()
+            parent_div.classList.remove("form__item_error")
+        }
+    }
     all_inputs.forEach(item =>{
+        del_error(item)
         if (item.value == ""){
-            console.log(1)
             error_input(item)
         }
     })
-    
-    
-    
 }
