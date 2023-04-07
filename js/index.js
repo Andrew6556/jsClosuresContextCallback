@@ -35,7 +35,11 @@ btn_del_card.forEach(item => {
 })
 document.querySelector(".form").addEventListener("submit", function(link){
     link.preventDefault();
-    validation(this)
+    let result = validation(this); 
+    if (result){
+        create_card(result)
+        link.target.reset()
+    }
 })
 
 function validation(form){
@@ -69,5 +73,16 @@ function validation(form){
 }
 
 function create_card(data_form){
-    
+    let wrapper_div = document.createElement("div");
+    wrapper_div.classList.add("card");
+
+    wrapper_div.innerHTML = `
+                            <div class='card__title title'>
+                                Пользователь:<span class="card__name">${data_form[0]}</span>
+                            </div>
+                            <div class='card__password title'>
+                                Пароль:<span class="card__password-text">${data_form[1]}</span>
+                            </div>`;
+
+    document.querySelector(".users-info__wrapper").appendChild(wrapper_div);
 }

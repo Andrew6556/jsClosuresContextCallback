@@ -153,10 +153,19 @@ input::placeholder{
 /* модификаторы кнопок*/
 .card__btn_open{
     border: 1px solid black;
+    transition: all 500ms ease-in-out 0s;
+}
+.card__btn_open:hover{
+    color: white;
+    background: #000;
 }
 .card__btn_del{
     color: white;
     background: #c70606e1;
+}
+.card__btn_del:hover{
+    color: white;
+    background: #c70606c0;
 }
 /* ______________ */
 
@@ -242,6 +251,10 @@ input::placeholder{
     box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
     border-radius: 50px;
     margin-bottom: 45px;
+    transition: all 500ms ease;
+}
+.form__input:focus{
+    box-shadow: inset 6px 6px 6px #5c82a78e, inset -6px -6px 6px rgba(101, 149, 194, 0.384);
 }
 /* действия при ошибки валидации */
 .form__item_error .form__input{
@@ -278,4 +291,10 @@ input::placeholder{
     color: white;
     background: rgba(10, 96, 172, 0.726);
     margin: 0 auto;
+    transition: all 500ms ease;
+}
+.form__btn:hover{
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: rgba(10, 96, 172, 0.486);
 }
