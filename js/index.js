@@ -1,5 +1,7 @@
 "use strict";
 
+import Card from "../modules/Card.js";
+
 let data_films = [
     {
         name:"Хатико",
@@ -14,7 +16,10 @@ let data_films = [
         url:"./img/3.webp",
     },
 ]
-
+data_films.forEach(data =>{
+    let card = new Card(data);
+    document.querySelector(".films__wrapper").appendChild(card.wrapper);
+})
 
 // let modal         = document.querySelectorAll(".modal"),
 //     modal_close   = document.querySelectorAll(".modal__close"),
