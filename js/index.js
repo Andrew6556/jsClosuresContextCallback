@@ -39,6 +39,7 @@ document.querySelector(".form").addEventListener("submit", function(link){
     if (result){
         create_card(result)
         link.target.reset()
+        // link.srcElement.offsetParent.parentElement.parentElement.classList.toggle("active")
     }
 })
 
