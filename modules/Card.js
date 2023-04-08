@@ -13,11 +13,12 @@ export default class Card{
                     <button class="card__btn card__btn_open">Open</button>
                     <button class="card__btn card__btn_del">Delete</button>
                 </div>`;
-        this.wrapper.querySelector(".card__btn_del").addEventListener("click",function(link){
-            link.target.closest(".card").remove()
-            // console.log(link.target.closest(".card").remove())
-        //         link.target.parentElement.parentElement.classList.add('animate');
-        //         setTimeout(() => link.target.parentElement.parentElement.remove(), 1000);
+        this.wrapper.querySelector(".card__btn_del").addEventListener("click", ()=>{
+            this.wrapper.classList.add('animate');
+            setTimeout(() => this.wrapper.remove(), 1000);
+        })
+        this.wrapper.querySelector(".card__btn_open").addEventListener("click", (el)=>{
+            console.log(el)
         })
     }
 }
