@@ -2,7 +2,7 @@
 
 import Card from "../modules/Card.js";
 import Header from "../modules/Header.js";
-
+import Modal from "../modules/Modal.js";
 
 
 let data_films = [
@@ -24,6 +24,9 @@ data_films.forEach(data =>{
     let card = new Card(data);
     document.querySelector(".films__wrapper").appendChild(card.wrapper);
 })
+
+document.querySelector(".wrapper").appendChild(new Modal(true).mainWrapper)
+
 
 // let modal         = document.querySelectorAll(".modal"),
 //     modal_close   = document.querySelectorAll(".modal__close"),
