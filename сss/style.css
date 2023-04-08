@@ -143,13 +143,6 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
 }
-/* модификаторы */
-.card_bg-brown{
-    box-shadow: 3px 3px 0px #2c0f0c8c;
-}
-.card_bg-yellow{
-    box-shadow: 3px 3px 0px #f2bb1494;
-}
 /* модификаторы кнопок*/
 .card__btn_open{
     border: 1px solid black;
