@@ -1,6 +1,9 @@
 "use strict";
 
 import Card from "../modules/Card.js";
+import Header from "../modules/Header.js";
+
+
 
 let data_films = [
     {
@@ -16,6 +19,7 @@ let data_films = [
         url:"./img/3.webp",
     },
 ]
+document.querySelector(".wrapper").appendChild(new Header().wrapper)
 data_films.forEach(data =>{
     let card = new Card(data);
     document.querySelector(".films__wrapper").appendChild(card.wrapper);

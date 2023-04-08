@@ -119,8 +119,13 @@ input::placeholder{
     justify-content: center;
     border-radius: 10px;
     border: 1px solid white;
+    transition: all 500ms ease-in-out 0s;
     padding: 10px 0;
     margin: 0 10px;
+}
+.header__form:hover{
+    color: black;
+    background: white;
 }
 /* films */
 .films__wrapper {
