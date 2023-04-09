@@ -21,4 +21,5 @@ export default class Card{
             console.log(el)
         })
     }
+    card_data()
 }

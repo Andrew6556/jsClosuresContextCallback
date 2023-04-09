@@ -26,8 +26,16 @@ data_films.forEach(data =>{
 })
 
 document.querySelectorAll(".modal").forEach(item =>{
-    let modal = Modal(item)
-    // document.querySelector(".films__wrapper").appendChild(modal.wrapper)
+    let modal = new Modal(item);
+    console.log(modal.modalWrapper.querySelector(".form"))
+    modal.modalWrapper.querySelector(".form")?.addEventListener("submit", (link) =>{
+        link.preventDefault();
+        let result = modal.validation(link.target); 
+        if (result){
+            link.target.reset()
+            // create_card(result)
+        }
+    })
 })
 
 
