@@ -7,7 +7,7 @@ export default class Modal{
             this.modalWrapper.classList.toggle("active")
         })
     }
-    validation(form){
+    validation(form, create_card){
         const all_inputs = form.querySelectorAll(".form__input");
         function error_input(input){
             let parent_div = input.parentElement
@@ -33,6 +33,6 @@ export default class Modal{
             }
         })
         const data_form = Array.from(all_inputs).map(item => item.value);
-        return (data_form.includes("")) ? false : data_form;
+        return (data_form.includes("")) ? false : create_card(data_form);
     }
 }

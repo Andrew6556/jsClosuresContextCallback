@@ -13,7 +13,7 @@ export default class Card{
                     <button class="card__btn card__btn_open">Open</button>
                     <button class="card__btn card__btn_del">Delete</button>
                 </div>`;
-        this.wrapper.querySelector(".card__btn_del").addEventListener("click", ()=>{
+        this.wrapper.querySelector(".card__btn_del").addEventListener("click", () =>{
             this.wrapper.classList.add('animate');
             setTimeout(() => this.wrapper.remove(), 1000);
         })

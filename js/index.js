@@ -18,8 +18,10 @@ let data_films = [
         name:"Волк с Уолл-стрит",
         url:"./img/3.webp",
     },
-]
+];
+
 document.querySelector(".wrapper").appendChild(new Header().wrapper)
+
 data_films.forEach(data =>{
     let card = new Card(data);
     card.wrapper.querySelector(".card__btn_open").addEventListener("click", function(event){
@@ -34,27 +36,25 @@ document.querySelectorAll(".modal").forEach(item =>{
     let modal = new Modal(item);
     modal.modalWrapper.querySelector(".form")?.addEventListener("submit", (link) =>{
         link.preventDefault();
-        let result = modal.validation(link.target); 
-        if (result){
+        console.log(modal.validation(link.target, create_card))
+        if (modal.validation(link.target, create_card) === undefined){
             link.target.reset()
-            // create_card(result)
         }
     })
 })
+document.querySelector(".header__form").addEventListener("click", () =>{
+    document.querySelector(".modalForm").classList.toggle("active")
+})
 
-
-
-// function create_card(data_form){
-//     let wrapper_div = document.createElement("div");
-//     wrapper_div.classList.add("card");
-
-//     wrapper_div.innerHTML = `
-//                             <div class='card__title title'>
-//                                 Пользователь:<span class="card__name">${data_form[0]}</span>
-//                             </div>
-//                             <div class='card__password title'>
-//                                 Пароль:<span class="card__password-text">${data_form[1]}</span>
-//                             </div>`;
-
-//     document.querySelector(".users-info__wrapper").appendChild(wrapper_div);
-// }
+function create_card(data_form){
+    let wrapper_div = document.createElement("div");
+    wrapper_div.classList.add("card");
+    wrapper_div.innerHTML = `
+                            <div class='card__title title'>
+                                Пользователь:<span class="card__name">${data_form[0]}</span>
+                            </div>
+                            <div class='card__password title'>
+                                Пароль:<span class="card__password-text">${data_form[1]}</span>
+                            </div>`;
+    document.querySelector(".users-info__wrapper").appendChild(wrapper_div);
+}
