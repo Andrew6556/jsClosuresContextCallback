@@ -25,7 +25,10 @@ data_films.forEach(data =>{
     document.querySelector(".films__wrapper").appendChild(card.wrapper);
 })
 
-document.querySelector(".wrapper").appendChild(new Modal(true).mainWrapper)
+document.querySelectorAll(".modal").forEach(item =>{
+    let modal = Modal(item)
+    // document.querySelector(".films__wrapper").appendChild(modal.wrapper)
+})
 
 
 // let modal         = document.querySelectorAll(".modal"),

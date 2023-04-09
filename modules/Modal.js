@@ -27,16 +27,14 @@ export default class Modal{
                         <button class="form__btn btn" type="submit">Отправить</button>
                     </div>
                 </form>`;
-            this.contentWrapper.querySelector(".form").addEventListener("submit", function(link){
-                // link.preventDefault();
-                console.log(1)
-                // let result = validation(this); 
-                //     if (result){
-                //         create_card(result)
-                //         link.target.reset()
-                // }
+            this.contentWrapper.querySelector(".form").addEventListener("submit", (link) =>{
+                link.preventDefault();
+                let result = this.validation(link.target); 
+                if (result){
+                    // create_card(result)
+                    link.target.reset()
+                }
             })
-            
         }else{
             this.contentWrapper.innerHTML = `
                 <span class="modalFilm__close modal__close">X</span>
@@ -45,15 +43,41 @@ export default class Modal{
                 </div>
                 <div class="modal__title title"></div>`;
         }
-        // console.log(this.contentWrapper.firstElementChild)
-        this.mainWrapper.appendChild(this.bodyWrapper.appendChild(this.contentWrapper))
-        this.window_visibility()
+        // this.mainWrapper.appendChild(this.bodyWrapper.appendChild(this.contentWrapper))
+        // this.window_visibility()
         
     }
-    window_visibility(){
-        this.mainWrapper.querySelector(".modal__close").addEventListener("click", () =>{
-            this.mainWrapper.classList.toggle("active")
-        })
-    }
-
+    // validation(form){
+    //     const all_inputs = form.querySelectorAll(".form__input");
+    //     function error_input(input){
+    //         let parent_div = input.parentElement
+    //         parent_div.classList.add("form__item_error")
+    
+    //         let message_error = document.createElement("span")
+    //         message_error.classList.add("form__error-text")
+    //         message_error.innerText = "*Не заполнено данное поле";
+    
+    //         parent_div.appendChild(message_error)
+    //     }
+    //     function del_error(input){
+    //         let parent_div = input.parentElement;
+    //         if (parent_div.classList.contains("form__item_error")){
+    //             parent_div.querySelector(".form__error-text").remove()
+    //             parent_div.classList.remove("form__item_error")
+    //         }
+    //     }
+    //     all_inputs.forEach(item =>{
+    //         del_error(item)
+    //         if (item.value == ""){
+    //             error_input(item)
+    //         }
+    //     })
+    //     const data_form = Array.from(all_inputs).map(item => item.value);
+    //     return (data_form.includes("")) ? false : data_form;
+    // }
+    // window_visibility(){
+    //     this.contentWrapper.querySelector(".modal__close").addEventListener("click", () =>{
+    //         this.mainWrapper.classList.toggle("active")
+    //     })
+    // }
 }
