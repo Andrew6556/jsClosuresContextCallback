@@ -17,12 +17,5 @@ export default class Card{
             this.wrapper.classList.add('animate');
             setTimeout(() => this.wrapper.remove(), 1000);
         })
-        // this.wrapper.querySelector(".card__btn_open").addEventListener("click", (el)=>{
-        //     console.log(el)
-        // })
-    }
-    get_data_from_card(link){
-        // modal[0].querySelector(".modal__img-item").src    = link.target.parentElement.parentElement.querySelector(".card__image-item").src;
-        // modal[0].querySelector(".modal__title").innerText = link.target.parentElement.parentElement.querySelector(".card__title").innerText;
     }
 }
