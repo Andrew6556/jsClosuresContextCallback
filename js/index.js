@@ -22,12 +22,16 @@ let data_films = [
 document.querySelector(".wrapper").appendChild(new Header().wrapper)
 data_films.forEach(data =>{
     let card = new Card(data);
+    card.wrapper.querySelector(".card__btn_open").addEventListener("click", function(event){
+        document.querySelector(".modal__img-item").src    = event.target.closest(".card").querySelector(".card__image-item").src;
+        document.querySelector(".modal__title").innerText = event.target.closest(".card").querySelector(".card__title").innerText;
+        document.querySelector(".modalFilm").classList.toggle("active")
+    })
     document.querySelector(".films__wrapper").appendChild(card.wrapper);
 })
 
 document.querySelectorAll(".modal").forEach(item =>{
     let modal = new Modal(item);
-    console.log(modal.modalWrapper.querySelector(".form"))
     modal.modalWrapper.querySelector(".form")?.addEventListener("submit", (link) =>{
         link.preventDefault();
         let result = modal.validation(link.target); 

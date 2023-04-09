@@ -3,16 +3,6 @@
 export default class Modal{
     constructor(data){
         this.modalWrapper = data;
-        // if (this.modalWrapper.classList.contains("modalForm")){
-        //     this.modalWrapper.querySelector(".form").addEventListener("submit", (link) =>{
-        //         link.preventDefault();
-        //         let result = this.validation(link.target); 
-        //         if (result){
-        //             link.target.reset()
-        //             // create_card(result)
-        //         }
-        //     })
-        // }
         this.modalWrapper.querySelector(".modal__close").addEventListener("click", () => {
             this.modalWrapper.classList.toggle("active")
         })
