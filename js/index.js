@@ -3,6 +3,8 @@
 import Card from "../modules/Card.js";
 import Header from "../modules/Header.js";
 import Modal from "../modules/Modal.js";
+import Data from "../modules/Data.js";
+
 
 
 let data_films = [
@@ -19,8 +21,11 @@ let data_films = [
         url:"./img/3.webp",
     },
 ];
+let header = new Header(),
+    data   = new Data();
 
-document.querySelector(".wrapper").appendChild(new Header().wrapper)
+header.wrapper.appendChild(data.wrapper)
+document.querySelector(".wrapper").appendChild(header.wrapper)
 
 data_films.forEach(data =>{
     let card = new Card(data);
@@ -36,9 +41,9 @@ document.querySelectorAll(".modal").forEach(item =>{
     let modal = new Modal(item);
     modal.modalWrapper.querySelector(".form")?.addEventListener("submit", (link) =>{
         link.preventDefault();
-        console.log(modal.validation(link.target, create_card))
-        if (modal.validation(link.target, create_card) === undefined){
+        if (modal.validation(link.target, data.add_card) !== false){
             link.target.reset()
+
         }
     })
 })
@@ -46,15 +51,3 @@ document.querySelector(".header__form").addEventListener("click", () =>{
     document.querySelector(".modalForm").classList.toggle("active")
 })
 
-function create_card(data_form){
-    let wrapper_div = document.createElement("div");
-    wrapper_div.classList.add("card");
-    wrapper_div.innerHTML = `
-                            <div class='card__title title'>
-                                Пользователь:<span class="card__name">${data_form[0]}</span>
-                            </div>
-                            <div class='card__password title'>
-                                Пароль:<span class="card__password-text">${data_form[1]}</span>
-                            </div>`;
-    document.querySelector(".users-info__wrapper").appendChild(wrapper_div);
-}

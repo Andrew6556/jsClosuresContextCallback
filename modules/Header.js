@@ -19,12 +19,6 @@ export default class Header{
                         </div>
                         <!-- cards__wrapper -->
                     </div>
-                    <div class="users-info">
-                        <div class="users-info__wrapper">
-                        
-                        </div>
-                    </div>
                 </div> `
     }
-
 }
