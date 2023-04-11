@@ -137,11 +137,14 @@ input::placeholder{
 }
 .card {
     width: 400px;
-    box-shadow: 3px 3px 0px #1a1a1a67;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     background: #ffff;
-    transition: all 1s ease-out 0s;
+    transition: all 600ms ease-out 0s;
     margin: 20px;
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .card__buttons{
     padding: 20px 0;
@@ -173,15 +176,12 @@ input::placeholder{
     padding: 8px 0;
     margin: 0 30px;
 }
-/* users-info */
-.users-info__wrapper{
+.dataForm__content{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.users-info__wrapper .title{
-    padding: 15px 0;
-}
+
 /* modal */
 .modal{
     position: fixed;

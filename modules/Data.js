@@ -6,7 +6,7 @@ export default class Data{
         this.wrapper.classList.add("dataForm", "container")
 
         this.wrapperTitle = document.createElement("div");
-        this.wrapperTitle.classList.add("dataForm__title")
+        this.wrapperTitle.classList.add("dataForm__title", "title")
         this.wrapperTitle.innerText = "Данные пользователей";
 
         this.wrapperContent = document.createElement("div");
