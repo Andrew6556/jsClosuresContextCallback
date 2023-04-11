@@ -43,7 +43,6 @@ document.querySelectorAll(".modal").forEach(item =>{
         link.preventDefault();
         if (modal.validation(link.target, data.add_card) !== false){
             link.target.reset()
-
         }
     })
 })

@@ -9,27 +9,25 @@ export default class Modal{
     }
     validation(form, create_card){
         const all_inputs = form.querySelectorAll(".form__input");
-        function error_input(input){
-            let parent_div = input.parentElement
+        function error_message(parent_div){
             parent_div.classList.add("form__item_error")
     
-            let message_error = document.createElement("span")
+            let message_error = document.createElement("span");
             message_error.classList.add("form__error-text")
             message_error.innerText = "*Не заполнено данное поле";
     
             parent_div.appendChild(message_error)
         }
-        function del_error(input){
-            let parent_div = input.parentElement;
+        function del_error(parent_div){
             if (parent_div.classList.contains("form__item_error")){
                 parent_div.querySelector(".form__error-text").remove()
                 parent_div.classList.remove("form__item_error")
             }
         }
         all_inputs.forEach(item =>{
-            del_error(item)
+            del_error(item.parentElement)
             if (item.value == ""){
-                error_input(item)
+                error_message(item.parentElement)
             }
         })
         const data_form = Array.from(all_inputs).map(item => item.value);
